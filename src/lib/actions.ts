@@ -1,6 +1,7 @@
 "use server";
 
 import fs from "fs/promises";
+import { updateTag } from "next/cache";
 import path from "path";
 
 export const addProduct = async (formData: FormData) => {
@@ -25,4 +26,6 @@ export const addProduct = async (formData: FormData) => {
 
   // Write back to file
   await fs.writeFile(filePath, JSON.stringify(products, null, 2));
+
+  updateTag("products");
 };

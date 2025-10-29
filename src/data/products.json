@@ -16,5 +16,11 @@
     "name": "Headphones",
     "price": 149,
     "stock": 50
+  },
+  {
+    "id": 4,
+    "name": "Iphone X",
+    "price": 1200,
+    "stock": 9
   }
 ]

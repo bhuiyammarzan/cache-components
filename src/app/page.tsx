@@ -1,4 +1,6 @@
 import { addProduct } from "@/lib/actions";
+import { Suspense } from "react";
+import ProductsPage from "./products";
 
 export default async function Home() {
   return (
@@ -58,6 +60,9 @@ export default async function Home() {
       </div>
 
       {/* Products List */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductsPage />
+      </Suspense>
     </div>
   );
 }
